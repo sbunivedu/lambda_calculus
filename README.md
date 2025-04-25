@@ -83,8 +83,7 @@ This version doesn’t work directly in Scheme without adjustments — because S
 In lazy languages like Haskell, this form works fine because the evaluation of (x x) can be delayed.
 
 In Scheme, you need to delay the recursive self-call so it doesn't blow up immediately. That's why we use the Z combinator or the "applicative-order Y combinator", which wraps the recursive call inside a lambda.
-|#
-
+```
 (define Y
   (lambda (f)
     ((lambda (x) (f (lambda (v) ((x x) v))))
@@ -99,7 +98,9 @@ In Scheme, you need to delay the recursive self-call so it doesn't blow up immed
 
 ((Y fact-gen) 5)
 ```
-Source: Lambda Calculus - Computerphile https://www.youtube.com/watch?v=eis11j_iGMs
+
+Source:
+* Lambda Calculus - Computerphile https://www.youtube.com/watch?v=eis11j_iGMs
 
 A combinator is a function with no free variables. The fixed point of a function is that value when applied to it results in itself.
 Basically, if you call a function f with fixpoint, the output should be equal to fixpoint.
