@@ -112,3 +112,6 @@ Y combinator works with any non-explicitly recursive function which takes a sing
 
 Y is the applicative order fixpoint operator for functionals. It is one of the most interesting, most beautiful, and weiredest ideas.
 
+source:
+* https://lucasfcosta.com/2018/05/20/Y-The-Most-Beautiful-Idea-in-Computer-Science.html
+
